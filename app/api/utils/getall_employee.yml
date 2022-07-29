@@ -1,0 +1,30 @@
+tags:
+- "Flask Project"
+summary: "Get All Employee"
+description: "This is a simple API ."
+consumes:
+- "application/json"
+produces:
+- "application/json"
+parameters:
+- in: "body"
+  name: "body"
+  description: "Accepts a input dictionary of orders"
+  required: "true"
+  schema:
+    type: "object"
+    properties:
+      order:
+        type: "object"
+#    example: {"emp_id":"2","username":"keerthana","password":"kumar","lname":"kumar"}
+
+responses:
+  400:
+    description: "Same response is for 202, 400, 403"
+    schema:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"

@@ -1,0 +1,46 @@
+tags:
+- "Flask Project"
+summary: "Get All Address"
+description: "This is a simple API ."
+consumes:
+- "application/json"
+produces:
+- "application/json"
+parameters:
+- in: "body"
+  name: "body"
+  description: "Accepts a input dictionary of orders"
+  required: "true"
+  schema:
+    type: "object"
+    properties:
+      order:
+        type: "object"
+        example: [{"city": "string",
+        "email": "kamal@gmail.com",
+        "emp_id": 1,
+        "fname": "kamal",
+        "id": 1,
+        "pin_code": 620010,
+        "street": "Thillai nagar"
+    },
+    {
+        "city": "Trichy",
+        "email": "karthi@gmail.com",
+        "emp_id": 2,
+        "fname": "karthick",
+        "id": 2,
+        "pin_code": 620010,
+        "street": "Thillai nagar"
+    }
+]
+responses:
+  400:
+    description: "Same response is for 202, 400, 403"
+    schema:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
